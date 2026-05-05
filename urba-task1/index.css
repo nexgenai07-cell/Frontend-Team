@@ -1,0 +1,199 @@
+body{
+    margin: 0; /* remove default browser margin */
+    padding: 0; /* remove default browser padding */
+    scroll-behavior: smooth; /* smooth scrolling effect */
+}
+
+/* Navbar */
+.navbar{
+    display: flex; /* enable flex layout */
+    align-items: center; /* vertically center items */
+    justify-content: space-around; /* space items evenly */
+    color: white; /* text color */
+    background-color: rgb(154, 226, 182); /* navbar background */
+}
+
+.menu-items{
+    display: flex; /* horizontal layout */
+    align-items: center; /* vertical alignment */
+    justify-content: center; /* center items */
+    gap: 20px; /* space between menu items */
+}
+
+a{
+    border: none; /* remove border */
+    color: white; /* link text color */
+    text-decoration: none; /* remove underline */
+    background-color: rgb(154, 226, 182); /* link background */
+}
+
+/* Header Section */
+header{
+    display: flex; /* flex layout */
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    background: linear-gradient(rgba(9, 9, 9, 0.685), rgba(0, 0, 0, 0.689)),
+            url('images/header\ pic.jpg') top/cover no-repeat; /* image + overlay */
+    height: 120vh; /* full screen height */
+}
+
+.head-text{
+    display: flex; /* flex container */
+    flex-direction: column; /* stack items vertically */
+    justify-content: center; /* vertical center */
+    align-items: center; /* horizontal center */
+    text-align: center; /* center text */
+    margin-bottom: 10%; /* bottom spacing */
+    color: white; /* text color */
+}
+
+.head-text h1{
+    font-size: 60px; /* large heading */
+    font-family: "sans-serif"; /* font style */
+    font-weight: normal; /* normal weight */
+}
+
+.head-text h3{
+    font-weight: 500; /* medium weight */
+}
+
+.head-text button{
+    padding: 10px; /* inner spacing */
+    border-radius: 15px; /* rounded corners */
+    border-color: transparent; /* no border */
+    color: white; /* text color */
+    background-color: rgb(154, 226, 182); /* button color */
+}
+
+/* Our products */
+.product h3{
+    font-size: xx-large; /* big section heading */
+    display: flex; /* flex for centering */
+    justify-content: center; /* center text */
+}
+
+.container{
+    width: 100%; /* full width */
+    display: grid; /* grid layout */
+    grid-template-areas:
+      "unit1 unit2 unit3"; /* 3-column layout */
+    grid-template-columns: repeat(3,1fr); /* equal columns */
+    grid-template-rows: 1fr; /* single row */
+    justify-content: center; /* center grid */
+    align-items: center; /* align items */
+}
+
+.container p{
+    text-align: center; /* center text */
+    margin: 8px; /* spacing around text */
+}
+
+.container .item{
+    display: flex; /* flex layout */
+    flex-direction: column; /* vertical stacking */
+    justify-content: center; /* center vertically */
+    align-items: center; /* center horizontally */
+    margin-bottom: 30px; /* bottom spacing */
+}
+
+#item1{
+   grid-area: unit1; /* first grid area */
+}
+
+#item2{
+    grid-area: unit2; /* second grid area */
+}
+
+#item3{
+    grid-area: unit3; /* third grid area */
+}
+
+.img_div img{
+    height: 50vh; /* image height */
+    width: auto; /* maintain aspect ratio */
+}
+
+.container button{
+    margin-top: 5px; /* space above button */
+    padding: 8px; /* inner spacing */
+    border-radius: 8px; /* rounded corners */
+    border: 1px solid grey; /* button border */
+}
+/* Footer */
+footer{
+    background-color: rgb(154, 226, 182); /* footer background */
+    border: 1px solid transparent; /* invisible border */
+}
+
+.footer-main{
+    display: grid; /* grid layout */
+    grid-template-columns: repeat(4, 1fr); /* FIXED syntax */
+    grid-template-areas: "item1 item2 item3 item4"; /* layout */
+    align-items: start; /* align top */
+    justify-content: space-around; /* spacing */
+    margin-top: 4rem; /* top spacing */
+    padding: 20px; /* inner spacing */
+}
+
+.footer-main ul{
+    list-style: none; /* remove bullets */
+    margin: 0;
+    padding: 0;
+}
+
+.footer-main li{
+    margin-top: 20px; /* spacing */
+}
+
+.footer-main a{
+    text-decoration: none; /* remove underline */
+    color: #878787; /* link color */
+}
+
+.footer-main p{
+    color: #878787; /* text color */
+}
+/* Contact layout */
+.contact{
+    display: flex; /* flex layout */
+}
+
+.contact-links{
+    display: flex;
+    flex-direction: column; /* vertical links */
+    gap: 10px; /* spacing */
+    margin-left: 0; /* removed icon spacing */
+}
+
+/* Newsletter */
+.newsletter{
+    padding: 3px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+
+.newsletter button{
+    border: 1px solid transparent;
+    padding: 10px;
+    width: 90px;
+    border-radius: 30px;
+    background-color: rgb(154, 226, 182);
+}
+
+.footer-main input{
+    outline: none;
+    border: transparent;
+    width: 8rem;
+}
+
+.copyright{
+    text-align: center;
+    color: #878787;
+    margin-top: 5rem;
+    padding: 10px;
+    background-color: rgb(154, 226, 182);
+}

@@ -1,0 +1,46 @@
+.login-page{
+    margin: 10% 0px; /* top-bottom spacing for page */
+    display: flex; /* enable flexbox layout */
+    align-items: center; /* vertically center content */
+    justify-content: center; /* horizontally center content */
+}
+
+.login-container {
+    background-color: white; /* card background */
+    padding: 20px; /* inner spacing */
+    border-radius: 8px; /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* soft shadow effect */
+    width: 300px; /* fixed card width */
+    text-align: center; /* center text inside */
+}
+
+.login-container h2 {
+    margin-bottom: 20px; /* space below heading */
+}
+
+.login-container label {
+    font-size: 14px; /* small label text */
+    margin-bottom: 5px; /* space below label */
+    display: block; /* label takes full line */
+    text-align: left; /* align label text left */
+}
+
+.login-container input {
+    width: 100%; /* full width input */
+    padding: 8px; /* inner spacing */
+    margin: 10px 0; /* space above and below */
+    border: 1px solid #ccc; /* light border */
+    border-radius: 4px; /* rounded input corners */
+    box-sizing: border-box; /* include padding in width */
+}
+
+.login-container button {
+    width: 100%; /* full width button */
+    padding: 10px; /* button inner spacing */
+    background-color: rgb(154, 226, 182); /* button color */
+    color: white; /* text color */
+    border: none; /* remove border */
+    border-radius: 4px; /* rounded button corners */
+    cursor: pointer; /* pointer on hover */
+    font-size: 16px; /* readable text size */
+}
