@@ -1,0 +1,177 @@
+<!-- 
+========================================================
+PROJECT: Simple  UI Page (Day 1 Task)
+CREATED BY: Rimsha Naeem
+DATE: 05 May 2026
+
+TASK: Day 1 - Basic Webpage Layout Practice
+- Header (Navbar with logo + menu + button)
+- Product Cards Section (3 cards with image, price, button)
+- Login Form (email, password, login button)
+- Footer (company, support, links)
+
+PURPOSE: Practice HTML + CSS structure, layout and UI building
+========================================================
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Makes website responsive on all devices (mobile, tablet, desktop) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- This text shows in browser tab (page title) -->
+    <title>ODION</title>
+
+    <!-- Linking external CSS file (all styling is written here) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER SECTION ================= -->
+    <!-- Header usually contains logo + navigation menu -->
+    <header>
+      <nav class="navbar">
+        <!-- Website Logo / Brand Name -->
+        <h2 class="logo">ODION</h2>
+
+        <!-- Navigation Menu Links -->
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- Login Button  -->
+        <button class="login-btn">Login</button>
+      </nav>
+    </header>
+
+    <!-- ================= MAIN CONTENT AREA ================= -->
+    <!-- Main contains all important page content -->
+    <main>
+      <!-- ================= PRODUCT SECTION ================= -->
+      <!-- This section shows product cards -->
+      <section class="products-section">
+        <!-- Section heading (title for products area) -->
+        <p class="card-section-heading">Card Section</p>
+
+        <!-- Container that holds all product cards -->
+        <div class="products-container">
+          <!-- ================= CARD 1 ================= -->
+          <div class="product-card">
+            <!-- Product Image -->
+            <img class="product-image" src="/images/shirt.jpg" alt="Shirt" />
+
+            <!-- Product Name -->
+            <h3 class="product-title">Shirt</h3>
+
+            <!-- Product Price -->
+            <p class="product-price">$20</p>
+
+            <!-- Buy Button -->
+            <button class="product-btn">Buy Now</button>
+          </div>
+
+          <!-- ================= CARD 2 ================= -->
+          <div class="product-card">
+            <!-- Product Image -->
+            <img class="product-image" src="/images/shoes.jpg" alt="Shoes" />
+
+            <!-- Product Name -->
+            <h3 class="product-title">Shoes</h3>
+
+            <!-- Product Price -->
+            <p class="product-price">$30</p>
+
+            <!-- Buy Button -->
+            <button class="product-btn">Buy Now</button>
+          </div>
+
+          <!-- ================= CARD 3 ================= -->
+          <div class="product-card">
+            <!-- Product Image -->
+            <img
+              class="product-image"
+              src="/images/perfume.jpg"
+              alt="Perfume"
+            />
+
+            <!-- Product Name -->
+            <h3 class="product-title">Perfumes</h3>
+
+            <!-- Product Price -->
+            <p class="product-price">$40</p>
+
+            <!-- Buy Button -->
+            <button class="product-btn">Buy Now</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= LOGIN SECTION ================= -->
+      <!-- This section contains login form -->
+      <section class="login-section">
+        <!-- Login Form Heading -->
+        <h2 class="login-heading">Login to Your Account</h2>
+
+        <!-- Login Form Starts -->
+        <form class="login-form">
+          <!-- Email Input Field -->
+          <input type="email" placeholder="Enter Email" required />
+
+          <!-- Password Input Field -->
+          <input type="password" placeholder="Enter Password" required />
+
+          <!-- Submit/Login Button -->
+          <button type="submit">Login</button>
+        </form>
+        <!-- Login Form Ends -->
+      </section>
+    </main>
+
+    <!-- ================= FOOTER SECTION ================= -->
+    <!-- Footer contains extra links and information -->
+    <footer class="footer">
+      <!-- Footer container for columns -->
+      <div class="footer-container">
+        <!-- Column 1: Company links -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Support links -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Legal links -->
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom footer text (copyright) -->
+      <div class="footer-bottom">
+        <p>© 2026 MyStore. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

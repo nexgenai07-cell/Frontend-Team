@@ -1,0 +1,209 @@
+/* Reset */
+/* Universal selector (applies to all elements) */
+* {
+  margin: 0; /* removes default browser margin */
+  padding: 0; /* removes default browser padding */
+  box-sizing: border-box; /* width/height include by default padding and border of element inside size */
+}
+
+/* Body */
+/* Main page font style */
+body {
+  font-family: Arial, sans-serif; /* sets styles of text */
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex; /* puts items in a row (horizontal layout) */
+  justify-content: space-between; /* space between logo, menu, button */
+  align-items: center; /* vertically center all items */
+  background: #333; /* dark background color */
+  color: white; /* text color white */
+  padding: 15px 30px; /* space inside navbar */
+}
+
+.nav-links {
+  list-style: none; /* removes bullet points */
+  display: flex; /* horizontal menu */
+  gap: 20px; /* space between menu items */
+}
+
+.nav-links a {
+  color: white; /* link text color */
+  text-decoration: none; /* removes underline */
+}
+
+.login-btn {
+  padding: 8px 15px; /* button size */
+  background: orange; /* button color */
+  border: none; /* removes border */
+  cursor: pointer; /* shows pointer on hover */
+  border-radius: 10px; /* makes corners rounded */
+}
+
+/* ===== PRODUCTS SECTION ===== */
+
+/* Main product section wrapper */
+.products-section {
+  margin: 2px 20px; /* outer spacing */
+  padding: 40px; /* inner spacing */
+}
+
+/* Section heading text */
+.card-section-heading {
+  text-align: center; /* centers text */
+  font-size: 28px; /* makes text big */
+  margin-bottom: 20px; /* space below heading */
+  color: #222; /* dark text color */
+}
+
+/* Container for all product cards */
+.products-container {
+  display: flex; /* puts cards in row */
+  justify-content: center; /* centers cards */
+  gap: 20px; /* space between cards */
+  flex-wrap: wrap; /* moves cards to next line on small screens */
+}
+
+/* Single product card */
+.product-card {
+  width: 180px; /* fixed width */
+  border: 1px solid #ddd; /* light border */
+  padding: 15px; /* inner spacing */
+  text-align: center; /* centers content */
+  border-radius: 10px; /* rounded corners */
+  background: #fff; /* white background */
+}
+
+/* Product image */
+.product-image {
+  width: 100%; /* image takes full card width */
+  border-radius: 8px; /* rounded image corners */
+}
+
+/* Product title */
+.product-title {
+  margin: 10px 0 5px; /* spacing above and below */
+}
+
+/* Product price */
+.product-price {
+  color: green; /* green color for price */
+  font-weight: bold; /* makes text bold */
+}
+
+/* Buy button */
+.product-btn {
+  margin-top: 10px; /* space above button */
+  padding: 8px; /* button size */
+  width: 100%; /* full width button */
+  border: none; /* removes border */
+  background: black; /* black background */
+  color: white; /* white text */
+  cursor: pointer; /* pointer on hover */
+  border-radius: 10px; /* rounded corners */
+}
+
+/* ===== LOGIN SECTION ===== */
+
+/* Login section wrapper */
+.login-section {
+  padding: 50px 20px; /* spacing inside section */
+  display: flex; /* flex layout */
+  flex-direction: column; /* items in column */
+  align-items: center; /* center horizontally */
+  background: #f9f9f9; /* light background */
+}
+
+/* Login heading */
+.login-heading {
+  font-size: 26px; /* text size */
+  margin-bottom: 20px; /* space below heading */
+  color: #222; /* dark text color */
+  text-align: center; /* center text */
+}
+
+/* Login form box */
+.login-form {
+  display: flex; /* flex layout */
+  flex-direction: column; /* inputs in column */
+  gap: 15px; /* space between inputs */
+  width: 300px; /* form width */
+  background: white; /* white box */
+  padding: 25px; /* inner spacing */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* soft shadow */
+}
+
+/* Input fields */
+.login-form input {
+  padding: 12px; /* input size */
+  border: 1px solid #ddd; /* light border */
+  border-radius: 5px; /* rounded corners */
+  outline: none; /* removes blue outline */
+}
+
+/* Input focus effect */
+.login-form input:focus {
+  border-color: orange; /* orange border on click */
+  box-shadow: 0 0 5px rgba(255,165,0,0.4); /* glow effect */
+}
+
+/* Login button */
+.login-form button {
+  padding: 12px; /* button size */
+  background: black; /* black background */
+  color: white; /* white text */
+  border: none; /* no border */
+  border-radius: 5px; /* rounded corners */
+  cursor: pointer; /* pointer cursor */
+ 
+}
+
+/* Button hover effect */
+.login-form button:hover {
+  background: orange; /* color changes on hover */
+  transform: scale(1.03); /* slight zoom effect */
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #222; /* dark background */
+  color: white; /* white text */
+  padding: 40px 20px; /* spacing */
+}
+
+.footer-container {
+  display: flex; /* columns in row */
+  justify-content: space-around; /* equal spacing */
+  flex-wrap: wrap; /* responsive wrap */
+}
+
+/* Footer column heading */
+.footer-col h4 {
+  margin-bottom: 10px; /* space below heading */
+}
+
+/* Remove bullet points */
+.footer-col ul {
+  list-style: none; /* no bullets */
+}
+
+/* List items spacing */
+.footer-col ul li {
+  margin-bottom: 5px; /* space between links */
+}
+
+/* Footer links */
+.footer-col ul li a {
+  color: #ccc; /* light gray color */
+  text-decoration: none; /* remove underline */
+}
+
+/* Bottom footer section */
+.footer-bottom {
+  text-align: center; /* center text */
+  margin-top: 20px; /* space above */
+  border-top: 1px solid #444; /* top line */
+  padding-top: 10px; /* space below line */
+}
