@@ -1,0 +1,136 @@
+/* ================================
+   🌍 GLOBAL STYLING
+   ================================ */
+
+/* Style for entire webpage */
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ================================
+   📦 MAIN CONTAINER
+   ================================ */
+
+/* Centers content and adds spacing */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+
+/* ================================
+   🎬 HEADING
+   ================================ */
+
+/* Space below heading */
+h1 {
+  margin-bottom: 20px;
+}
+
+
+/* ================================
+   📝 FORM SECTION
+   ================================ */
+
+/* Align input fields and button in one row */
+.form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+/* ================================
+   ⌨️ INPUT FIELDS
+   ================================ */
+
+/* Styling for movie name and genre inputs */
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+
+/* ================================
+   🔘 BUTTON STYLING
+   ================================ */
+
+/* General button design */
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* Button hover effect */
+button:hover {
+  background: #2563eb;
+}
+
+
+/* ================================
+   🔍 FILTER BUTTONS
+   ================================ */
+
+/* Space below filter buttons */
+.filters {
+  margin-bottom: 20px;
+}
+
+
+/* ================================
+   🎞️ MOVIE LIST GRID
+   ================================ */
+
+/* Responsive grid layout for movie cards */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+
+/* ================================
+   🎴 MOVIE CARD
+   ================================ */
+
+/* Individual movie card styling */
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+
+/* Remove default margin from title */
+.card h3 {
+  margin: 0;
+}
+
+
+/* Style movie genre text */
+.card p {
+  color: #cbd5e1;
+}
+
+
+/* Make buttons full width inside cards */
+.card button {
+  margin-top: 10px;
+  width: 100%;
+}

@@ -1,0 +1,55 @@
+<!-- 
+========================================================
+PROJECT: Movie Watchlist App
+CREATED BY: Urba Zahid
+DATE: 07 May 2026
+
+TASK:
+- Add movie name and genre using input fields
+- Display movies dynamically using JavaScript
+- Use map() / forEach() for rendering movie cards
+- Implement Mark as Watched functionality
+- Implement Remove Movie functionality
+- Filter movies by watched and unwatched status
+
+PURPOSE:
+Practice advanced JavaScript (map/filter)
+========================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Watchlist</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🎬 Movie Watchlist</h1>
+
+    <!-- Add Movie Form -->
+    <div class="form">
+      <input type="text" id="movieName" placeholder="Movie name" />
+      <input type="text" id="movieGenre" placeholder="Genre" />
+      <button onclick="addMovieFromInput()">Add Movie</button>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+      <button onclick="renderMovies('all')">All</button>
+      <button onclick="renderMovies('watched')">Watched</button>
+      <button onclick="renderMovies('unwatched')">Unwatched</button>
+    </div>
+
+    <!-- Movie List -->
+    <div id="movieList" class="movie-list"></div>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
