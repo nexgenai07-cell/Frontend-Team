@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #f3f4f6;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Main Card */
+
+.container{
+    width: 100%;
+    max-width: 550px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+/* Heading */
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: #222;
+
+    font-size: 32px;
+}
+
+
+/* Input Section */
+
+.input-section{
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+#input-text{
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+#input-text:focus{
+    border-color: #007bff;
+}
+
+
+/* Add Button */
+
+#addBtn{
+    padding: 14px 20px;
+
+    border: none;
+
+    background: #007bff;
+
+    color: white;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+#addBtn:hover{
+    background: #0056b3;
+}
+
+
+/* Filter Buttons */
+
+.filter-buttons{
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.filter-buttons button{
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #e9ecef;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.filter-buttons button:hover{
+    background: #d6d9dd;
+}
+
+
+/* Tasks */
+
+#taskList{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* Task Card */
+
+.task{
+    background: #f8f9fa;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+/* Task Text */
+
+.task p{
+    font-size: 17px;
+    color: #333;
+}
+
+
+/* Completed Task */
+
+.done{
+    text-decoration: line-through;
+    color: green !important;
+}
+
+
+/* Buttons inside Task */
+
+.task div{
+    display: flex;
+    gap: 8px;
+}
+
+.task button{
+    border: none;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* Done Button */
+
+.task button:first-child{
+    background: green;
+}
+
+
+/* Delete Button */
+
+.task button:last-child{
+    background: crimson;
+}
+
+
+/* Empty Message */
+
+.empty-msg{
+    text-align: center;
+
+    color: gray;
+
+    padding: 20px;
+
+    font-size: 18px;
+}
+
+
+/* Responsive */
+
+@media(max-width: 600px){
+
+    .input-section{
+        flex-direction: column;
+    }
+
+    .task{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .task div{
+        width: 100%;
+    }
+
+    .task button{
+        flex: 1;
+    }
+}
