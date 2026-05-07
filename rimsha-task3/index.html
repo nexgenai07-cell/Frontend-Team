@@ -1,0 +1,96 @@
+<!-- 
+========================================================
+PROJECT: Contact Book Mini App (Task 3)
+CREATED BY: Rimsha Naeem
+DATE: 07 May 2026
+
+TASK: JavaScript Contact Management System
+- Add Contact Form
+    • Contact Name
+    • Phone Number
+
+- Dynamic Contact Display using map()
+- Search / Filter Contacts using filter()
+- Delete Contact Functionality
+- Real-time UI Updates using DOM Manipulation
+- Proper Form Handling and Events
+
+PURPOSE:
+Practice JavaScript concepts including:
+• Arrays and Objects
+• map() and filter()
+• Dynamic Rendering
+• Form Handling
+• DOM Manipulation
+• Event Handling
+========================================================
+-->
+
+<!doctype html>
+
+<!-- Starting HTML -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website title -->
+    <title>Contact Book Mini App</title>
+
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main container of app -->
+    <div class="main-container">
+      <!-- Main heading -->
+      <h1>Contact Book Mini App</h1>
+
+      <!-- Form container -->
+      <div class="form-container">
+        <!-- Name input section -->
+        <div class="input-group">
+          <!-- Label for name input -->
+          <label for="name-input">Contact Name</label>
+
+          <!-- Input for name -->
+          <input type="text" id="name-input" placeholder="Enter Contact Name" />
+        </div>
+
+        <!-- Phone input section -->
+        <div class="input-group">
+          <!-- Label for phone input -->
+          <label for="phone-input">Phone Number</label>
+
+          <!-- Input for phone number -->
+          <input type="tel" id="phone-input" placeholder="Enter Phone Number" />
+        </div>
+
+        <!-- Button section -->
+        <div class="button-group">
+          <!-- Add contact button -->
+          <button id="add-btn">Add Contact</button>
+        </div>
+      </div>
+
+      <!-- Search section -->
+      <div class="search-container">
+        <!-- Label for search input -->
+        <label for="search-input">Search Contact</label>
+
+        <!-- Search input -->
+        <input type="text" id="search-input" placeholder="Search By Name" />
+      </div>
+
+      <!-- Contact list container -->
+      <div id="contact-list" class="contact-list">
+        <!-- Contacts will appear dynamically -->
+      </div>
+    </div>
+
+    <!-- Linking JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
