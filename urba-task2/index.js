@@ -1,4 +1,7 @@
-let products=[
+/* ================================
+   PRODUCT DATA (STATIC DATABASE)
+   ================================ */
+let products = [
     {
       name: "Rice Face Wash & Scrub",
       image: "images/Product1.webp",
@@ -60,39 +63,78 @@ let products=[
       price: "Rs. 799",
     }
 ];
-let cart=[]
 
-products.forEach((product,index) => {
-  let card=`
+/* ================================
+   CART ARRAY (USER SELECTED ITEMS)
+   ================================ */
+let cart = [];
+
+/* ================================
+   RENDER PRODUCTS ON PAGE LOAD
+   ================================ */
+products.forEach((product, index) => {
+  let card = `
   <div class="product-card">
         <img src="${product.image}" />
         <h3>${product.name}</h3>
         <p>${product.price}</p>
-        <button class="add-to-cart" onclick="addtocart(${index})">Add to cart</button>
+
+        <!-- ADD TO CART BUTTON -->
+        <button class="add-to-cart" onclick="addtocart(${index})">
+            Add to cart
+        </button>
   </div>
 `;
-document.querySelector(".container").innerHTML += card;
+
+  // inject product cards into container
+  document.querySelector(".container").innerHTML += card;
 });
+
+/* ================================
+   INCREASE QUANTITY
+   ================================ */
 function counterincrease(index){
-   cart[index].quantity++;
-   cartrender();
+   cart[index].quantity++; // increase item quantity
+   cartrender(); // re-render cart UI
 }
+
+/* ================================
+   DECREASE QUANTITY
+   ================================ */
 function counterdecrease(index){
-    if((cart[index].quantity)>0){
-       cart[index].quantity--;
-       cartrender();
+    if(cart[index].quantity > 0){
+       cart[index].quantity--; // decrease quantity
+       cartrender(); // update UI
     }
 }
+
+/* ================================
+   RENDER CART ITEMS
+   ================================ */
 function cartrender(){
-    let cartitems=document.querySelector(".cart-items");
-    cartitems.innerHTML=''
-    cart.forEach((element,index) => {
-    let cartelement=`
+    let cartitems = document.querySelector(".cart-items");
+
+    cartitems.innerHTML = ''; // clear old UI before re-render
+
+    cart.forEach((element, index) => {
+    let cartelement = `
     <div class="cart-products">
+
+        <!-- PRODUCT NAME -->
         <h4>${element.name}</h4>
+
+        <!-- PRODUCT PRICE -->
         <h5>${element.price}</h5>
+
+        <!-- QUANTITY CONTROLS -->
         <div class="cart-buttons">
-        <button onclick="counterdecrease(${index})">-</button>${element.quantity}<button onclick="counterincrease(${index})">+</button>
+
+        <button onclick="counterdecrease(${index})">-</button>
+
+        ${element.quantity}
+
+        <button onclick="counterincrease(${index})">+</button>
+
         </div>
     </div>
 `;
@@ -100,16 +142,33 @@ function cartrender(){
 });
 }
 
+/* ================================
+   ADD ITEM TO CART
+   ================================ */
 function addtocart(index){
-    let selectedproduct=products[index];
-    cart.push({...selectedproduct,quantity:1});
-    cartrender();
-    ToggleEvent();
+
+    let selectedproduct = products[index];
+
+    // add product with default quantity = 1
+    cart.push({...selectedproduct, quantity: 1});
+
+    cartrender(); // update cart UI
+
+    ToggleEvent(); // open sidebar
 }
- function ToggleEvent(){
+
+/* ================================
+   OPEN CART SIDEBAR
+   ================================ */
+function ToggleEvent(){
     document.querySelector(".cart-container")
     .classList.add("active");
 }
+
+/* ================================
+   CLOSE CART SIDEBAR
+   ================================ */
 function closeCart() {
-    document.querySelector(".cart-container").classList.remove("active");
+    document.querySelector(".cart-container")
+    .classList.remove("active");
 }
