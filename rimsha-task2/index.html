@@ -1,0 +1,74 @@
+<!-- 
+========================================================
+PROJECT: Mini Product System (Task 2)
+CREATED BY: Rimsha Naeem
+DATE: 06 May 2026
+
+TASK: Mini Product System
+- Display Products Dynamically
+- Product Cards with:
+    • Product Image
+    • Product Name
+    • Product Price
+    • Add to Cart Button
+
+- Add to Cart Functionality
+- Real-time Cart Counter Update
+- Dynamic UI Rendering using DOM Manipulation
+- Proper Event Handling
+
+PURPOSE:
+Practice JavaScript concepts including:
+• Variables and Functions
+• Arrays and Objects
+• Conditions and Loops
+• DOM Manipulation
+• Event Handling
+• Dynamic Rendering
+========================================================
+-->
+
+<!doctype html>
+
+<!-- Starting of HTML -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title shown on browser tab -->
+    <title>Mini Product System</title>
+
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main container of whole page -->
+    <div class="main-container">
+      <!-- Header section -->
+      <div class="header">
+        <!-- Website heading -->
+        <h1>Mini Product System</h1>
+
+        <!-- Cart section -->
+        <div class="cart-box">
+          <!-- Cart text -->
+          <span> Cart:</span>
+
+          <!-- Cart counter number -->
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+
+      <!-- Product container where products will come dynamically -->
+      <div id="product-container" class="product-container">
+        <!-- Products will be added from JavaScript -->
+      </div>
+    </div>
+
+    <!-- Linking JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
