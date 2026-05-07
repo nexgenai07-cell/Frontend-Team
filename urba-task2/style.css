@@ -2,10 +2,10 @@
    PRODUCT GRID LAYOUT
    ================================ */
 .container{
-    display: grid; /* products ko grid me show karta hai */
-    grid-template-columns: repeat(3,1fr); /* 3 columns equal width */
+    display: grid; /* displays products in grid format */
+    grid-template-columns: repeat(3,1fr); /* creates 3 equal columns */
     width: 100%;
-    gap: 10px; /* cards ke darmiyan space */
+    gap: 10px; /* space between product cards */
 }
 
 
@@ -14,15 +14,15 @@
    ================================ */
 .product-card{
     display: flex;
-    flex-direction: column; /* content vertical stack */
-    align-items: center; /* center align items */
-    /* border: 1px solid #ddd; (optional border) */
+    flex-direction: column; /* stacks content vertically */
+    align-items: center; /* centers content horizontally */
+    /* border: 1px solid #ddd; optional border for styling */
 }
 
 /* product image styling */
 .product-card img {
-    object-fit: cover; /* image crop properly fit kare */
-    height: 250px; /* fixed height for uniform cards */
+    object-fit: cover; /* ensures image fits without distortion */
+    height: 250px; /* fixed height for uniform card design */
 }
 
 
@@ -30,8 +30,8 @@
    CART SIDEBAR CONTAINER
    ================================ */
 .cart-container{
-    position: fixed; /* screen pe fixed sidebar */
-    right: -380px; /* hidden state (off-screen) */
+    position: fixed; /* keeps sidebar fixed on screen */
+    right: -380px; /* hides sidebar off-screen initially */
     top: 0;
     width: 320px;
     height: 100vh; /* full screen height */
@@ -39,22 +39,22 @@
     border-left: 2px solid #eee;
     padding: 20px;
     padding-top: 40px;
-    overflow-y: auto; /* scroll if content is long */
+    overflow-y: auto; /* enables scrolling for long cart */
 }
 
-/* active state → sidebar visible */
+/* active state → shows sidebar */
 .cart-container.active{
-    right: 0; /* slide in from right */
+    right: 0; /* slides sidebar into view */
 }
 
 
 /* ================================
-   CROSS / CLOSE BUTTON
+   CLOSE (CROSS) BUTTON
    ================================ */
 .cross-button{
-    position: absolute; /* relative to cart-container */
+    position: absolute; /* positioned relative to cart container */
     top: 10px;
-    right: 20px; /* top-right corner */
+    right: 20px; /* places it at top-right corner */
 }
 
 
@@ -68,7 +68,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 8px; /* spacing inside card */
+    gap: 8px; /* spacing between elements */
 }
 
 
@@ -91,7 +91,7 @@
    ================================ */
 .cart-buttons{
     display: flex;
-    align-items: center; /* buttons + number inline */
+    align-items: center; /* aligns buttons and quantity inline */
 }
 
 .cart-products button{
