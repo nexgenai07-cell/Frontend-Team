@@ -1,0 +1,16 @@
+.header{
+    height: 25vh; /* header takes 25% of viewport height */
+
+    background: linear-gradient(135deg,
+        #7c3aed,
+        #9333ea,
+        #a855f7,
+        #6366f1); /* purple-blue gradient background */
+
+    line-height: 15vh; /* vertical alignment trick for text */
+}
+
+.header h1{
+    text-align: center; /* centers text horizontally */
+    color: #3f0c70; /* dark purple text color */
+}

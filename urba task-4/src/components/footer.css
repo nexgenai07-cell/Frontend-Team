@@ -1,0 +1,37 @@
+.footer{
+    margin-top: auto; /* pushes footer to bottom of page */
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #9333ea,
+        #a855f7
+    ); /* purple gradient background */
+
+    color: white; /* white text color */
+    padding: 20px; /* inner spacing */
+}
+
+.footer-content{
+    text-align: center; /* centers all footer text */
+}
+
+.links{
+    margin: 10px 0; /* spacing above and below links */
+}
+
+.links a{
+    margin: 0 10px; /* space between links */
+    color: white; /* link color */
+    text-decoration: none; /* removes underline */
+    font-size: 14px; /* small readable text */
+}
+
+.links a:hover{
+    text-decoration: underline; /* underline on hover effect */
+}
+
+.copy{
+    font-size: 12px; /* smaller copyright text */
+    margin-top: 10px; /* spacing above */
+    opacity: 0.8; /* slightly faded look */
+}

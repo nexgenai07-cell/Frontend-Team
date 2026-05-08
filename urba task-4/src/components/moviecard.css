@@ -1,0 +1,13 @@
+.card{
+    width: 100%; /* full width of grid cell */
+    display: flex; /* enable flex layout */
+    flex-direction: column; /* stack items vertically */
+    align-items: center; /* center horizontally */
+    justify-content: center; /* center vertically */
+}
+
+.card img{
+    width: 100%; /* image takes full card width */
+    object-fit: contain; /* keeps image ratio without cropping */
+    height: 450px; /* fixed image height */
+}

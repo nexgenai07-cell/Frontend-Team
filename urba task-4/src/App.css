@@ -1,0 +1,9 @@
+body{
+    margin: 0; /* Removes default browser margin */
+}
+
+.movie-container{
+    padding-top: 40px; /* Adds space from top (below header) */
+    display: grid; /* Enables grid layout for movie cards */
+    grid-template-columns: repeat(2,1fr); /* Creates 2 equal-width columns */
+}

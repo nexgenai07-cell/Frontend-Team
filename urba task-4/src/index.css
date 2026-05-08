@@ -1,0 +1,5 @@
+#root {
+    min-height: 100vh; /* full screen height */
+    display: flex; /* enable flex layout */
+    flex-direction: column; /* stack items vertically */
+}
