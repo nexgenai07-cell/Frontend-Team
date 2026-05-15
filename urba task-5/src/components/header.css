@@ -1,0 +1,23 @@
+.navbar-container {
+    height: 30vh; 
+    background: #edbd3a; /* sets navbar background color */
+    display: flex; /* enables flexbox layout */
+    flex-direction: column; /* stacks items vertically */
+    justify-content: center; /* centers content vertically */
+    align-items: center; /* centers content horizontally */
+}
+
+.navbar-container h1 {
+    color: #ffffff; /* makes heading text white */
+}
+
+.navbar-links a {
+    margin: 0 10px; /* space between links */
+    color: white; /* link text color */
+    text-decoration: none; /* removes underline */
+    font-size: 14px; /* controls text size */
+}
+
+.navbar-links a:hover {
+    text-decoration: underline; /* shows underline on hover */
+}
