@@ -1,0 +1,30 @@
+/* Main table styling */
+table {
+  width: 90%;
+  border-collapse: collapse; /* removes double borders */
+  margin: 20px auto; /* centers table */
+  font-family: Arial, sans-serif;
+}
+
+/* Table cells (header + data) */
+th, td {
+  border: 1px solid #ddd; /* light border */
+  padding: 12px 16px; /* space inside cells */
+  text-align: left;
+}
+
+/* Header styling */
+th {
+  background-color: #f4f4f4; /* light gray background */
+  font-weight: bold;
+}
+
+/* Row animation effect */
+tr {
+  transition: 0.2s ease;
+}
+
+/* Hover effect on rows */
+tr:hover {
+  background-color: #d8d6d6; /* highlight row on hover */
+}

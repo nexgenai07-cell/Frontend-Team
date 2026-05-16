@@ -1,0 +1,10 @@
+body {
+  margin: 0; /* removes default browser spacing */
+}
+
+/* React root container */
+#root {
+  min-height: 100vh; /* full screen height */
+  display: flex; /* enables flex layout */
+  flex-direction: column; /* stacks children vertically */
+}
