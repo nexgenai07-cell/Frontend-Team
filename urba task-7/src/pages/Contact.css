@@ -1,0 +1,85 @@
+/* main page container */
+.contact-page {
+    padding: 40px;
+    background: #f4f6fb;
+    min-height: 100vh;
+    font-family: Arial;
+}
+
+/* header section */
+.contact-hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* main heading */
+.contact-hero h1 {
+    font-size: 32px;
+}
+
+/* layout wrapper (form + info side by side) */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* form container */
+.contact-form {
+    background: white;
+    padding: 20px;
+    width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* input and textarea fields */
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* textarea size control */
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* submit button */
+.contact-form button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* button hover effect */
+.contact-form button:hover {
+    background: #1e40af;
+}
+
+/* contact info card */
+.contact-card {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* highlight tip box */
+.mini-box {
+    margin-top: 15px;
+    padding: 10px;
+    background: #eef2ff;
+    border-radius: 8px;
+    font-size: 14px;
+}
