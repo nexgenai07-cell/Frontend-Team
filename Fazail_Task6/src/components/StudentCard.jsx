@@ -8,7 +8,7 @@ import {
 // Student Card Component
 function StudentCard({ student }) {
   return (
-    <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 shadow-xl hover:scale-105 hover:shadow-cyan-500/30 transition duration-300 border border-slate-700">
+    <div className="bg-linear-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 shadow-xl hover:scale-105 hover:shadow-cyan-500/30 transition duration-300 border border-slate-700">
 
       {/* Top Icon */}
       <div className="flex justify-center mb-4">
