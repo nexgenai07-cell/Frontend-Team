@@ -1,3 +1,5 @@
+import { FaUserCircle } from "react-icons/fa";
+
 function Navbar() {
   return (
     // Navbar container
@@ -7,7 +9,6 @@ function Navbar() {
         {/* Website Logo */}
         <div>
           <h1 className="text-3xl font-bold">TravelWorld</h1>
-
           <p className="text-sm text-gray-300">Explore The Beauty Of Nature</p>
         </div>
 
@@ -34,10 +35,15 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* Button */}
-        <button className="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">
-          Book Now
-        </button>
+        {/* Profile + Button */}
+        <div className="flex items-center gap-2">
+          {/* Button */}
+          <button className="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">
+            Book Now
+          </button>
+          {/* Profile Icon */}
+          <FaUserCircle className="text-4xl cursor-pointer hover:text-yellow-400 transition" />
+        </div>
       </div>
     </nav>
   );
