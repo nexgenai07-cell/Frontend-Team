@@ -29,8 +29,8 @@ function Footer() {
                     <h4>Navigate</h4>
                     <ul>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/Students">Student</Link></li>
-                        <li><Link to="/About">About</Link></li>
+                        <li><Link to="/books">Books</Link></li>
+                        <li><Link to="/Contact">Contact</Link></li>
                     </ul>
                 </div>
 
