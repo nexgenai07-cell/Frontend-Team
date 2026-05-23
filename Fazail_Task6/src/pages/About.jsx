@@ -1,8 +1,7 @@
 import {
   FaUserGraduate,
   FaDatabase,
-  FaCode,
-  FaReact,
+  
   FaClipboardCheck,
   FaChartBar,
 } from "react-icons/fa";

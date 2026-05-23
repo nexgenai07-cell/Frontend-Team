@@ -1,4 +1,7 @@
-const Products = [   /*array of objects*/
+// ==========================
+// Products Data (Array of Objects)
+// ==========================
+const Products = [
     {
         id: 1,
         name: "Headphones",
@@ -17,7 +20,7 @@ const Products = [   /*array of objects*/
         Price: "20$",
         img: "images/img3.avif"
     },
-     {
+    {
         id: 4,
         name: "Glasses",
         Price: "20$",
@@ -25,89 +28,199 @@ const Products = [   /*array of objects*/
     }
 ];
 
-const product_container = document.querySelector(".product-container");        /*for getting the element*/
-const cart_container=document.querySelector(".yourcart-container");            /*for getting the element*/
-const counter = document.getElementById("count");                              /*for getting the element*/
-const cart=[];                       /*array for storing cart*/
-let count = 0;                      /*cart counter*/
+// ==========================
+// Selecting HTML Elements
+// ==========================
 
-/*add to cart function */
-function addtocart(id){               
-    let product = Products.find(p => p.id == id);           /*matches the id from the products array and store it to the product variable*/
-    let alreadyInCart=cart.find(item => item.id == id);      /*matches the id from the cart array and store it to the product variable*/
-    if(alreadyInCart){/* checks if the product is already in the cart*/
-        alert("Already in cart!");
-        return;
-    }
-    else{
-     cart.push(product);   /*if not in the cart pushes it into the cart array*/
+// Container where all products will be displayed
+const product_container = document.querySelector(".product-container");
 
-     displayCartProducts();
-      count++;           /*updates the counter*/
-      counter.innerText = count;
-     alert("Added to cart!");
+// Container where cart products will be displayed
+const cart_container = document.querySelector(".yourcart-container");
+
+// Cart counter element
+const counter = document.getElementById("count");
+
+// ==========================
+// Variables
+// ==========================
+
+// Stores products added to cart
+const cart = [];
+
+// Total number of items in cart
+let count = 0;
+
+// ==========================
+// Add Product To Cart
+// ==========================
+function addtocart(id) {
+
+    // Find clicked product from Products array
+    const product = Products.find(p => p.id == id);
+
+    // Check if product already exists in cart
+    const cartItem = cart.find(item => item.id == id);
+
+    if (cartItem) {
+
+        // Increase quantity if already present
+        cartItem.quantity++;
+
+    } else {
+
+        // Add new product to cart with quantity 1
+        cart.push({
+            ...product,
+            quantity: 1
+        });
     }
-    
+
+    // Increase overall cart count
+    count++;
+
+    // Update count on screen
+    counter.innerText = count;
+
+    // Refresh product cards
+    display_products();
+
+    // Refresh cart section
+    displayCartProducts();
 }
 
+// ==========================
+// Decrease Product Quantity
+// ==========================
+function decreaseQuantity(id) {
 
+    // Find product inside cart
+    const cartItem = cart.find(item => item.id == id);
 
+    // Stop function if product doesn't exist
+    if (!cartItem) {
+        return;
+    }
 
+    // Reduce quantity by 1
+    cartItem.quantity--;
 
+    // Reduce overall cart counter
+    count--;
 
-function display_products() {     
-    /* Function to render all products on the page */
+    // Update counter on screen
+    counter.innerText = count;
 
-    Products.forEach(p => {    
-        /* Loop through each product object in Products array */
+    // If quantity becomes 0
+    if (cartItem.quantity === 0) {
 
-        // Create a new div for product card
+        // Get index of product in cart array
+        const index = cart.findIndex(item => item.id == id);
+
+        // Remove product completely from cart
+        cart.splice(index, 1);
+    }
+
+    // Refresh product cards
+    display_products();
+
+    // Refresh cart display
+    displayCartProducts();
+}
+
+// ==========================
+// Display All Products
+// ==========================
+function display_products() {
+
+    // Clear previous product cards
+    product_container.innerHTML = "";
+
+    // Loop through all products
+    Products.forEach(p => {
+
+        // Check if current product exists in cart
+        const cartItem = cart.find(item => item.id == p.id);
+
+        // Get quantity if exists otherwise 0
+        const qty = cartItem ? cartItem.quantity : 0;
+
+        // Create product card
         const card = document.createElement("div");
 
-        // Add class "card" for styling
+        // Add class for styling
         card.classList.add("card");
 
-        // Add HTML content inside the card
+        // Product card content
         card.innerHTML = `
-            <img src="${p.img}" alt="">   
-            <h3>${p.name}</h3>            
-            <p>${p.Price}</p>            
-            <button data-id=${p.id}>Add to Cart</button>
+            <img src="${p.img}" alt="">
+            <h3>${p.name}</h3>
+            <p>${p.Price}</p>
+
+            <!-- Current quantity in cart -->
+            <p>In Cart: ${qty}</p>
+
+            <!-- Increase quantity -->
+            <button class="add-btn" data-id="${p.id}">+</button>
+
+            <!-- Decrease quantity -->
+            <button class="minus-btn" data-id="${p.id}">-</button>
         `;
 
-        // Select button from the current card
-        const button = card.querySelector("button");
+        // Add button click event
+        card.querySelector(".add-btn").addEventListener("click", (e) => {
 
-        // Add click event on button
-        button.addEventListener("click", (e) => {
-
-            // Get product id from button's data-id attribute
-            let id = e.target.getAttribute("data-id");
-
-            // Call addtocart function with clicked product id
-            addtocart(id);
+            // Get product id from button
+            addtocart(e.target.dataset.id);
         });
 
-        // Add the completed card into product container
+        // Minus button click event
+        card.querySelector(".minus-btn").addEventListener("click", (e) => {
+
+            // Get product id from button
+            decreaseQuantity(e.target.dataset.id);
+        });
+
+        // Append card into products container
         product_container.appendChild(card);
     });
 }
 
+// ==========================
+// Display Cart Products
+// ==========================
+function displayCartProducts() {
 
-function displayCartProducts() {     /*for rendring the cart array*/
+    // Clear previous cart items
     cart_container.innerHTML = "";
-    cart.forEach(p => {
-      const cartCard = document.createElement("div");
 
+    // Loop through cart array
+    cart.forEach(p => {
+
+        // Create cart card
+        const cartCard = document.createElement("div");
+
+        // Add class for styling
         cartCard.classList.add("card");
-         cartCard.innerHTML = `
+
+        // Cart item content
+        cartCard.innerHTML = `
             <img src="${p.img}" width="100">
             <h3>${p.name}</h3>
             <p>${p.Price}</p>
+
+            <!-- Product quantity in cart -->
+            <p>Quantity: ${p.quantity}</p>
         `;
 
+        // Add cart card to cart container
         cart_container.appendChild(cartCard);
-    })
+    });
 }
 
+// ==========================
+// Initial Render
+// ==========================
+
+// Display products when page loads
 display_products();

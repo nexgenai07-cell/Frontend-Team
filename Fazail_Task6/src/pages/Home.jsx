@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import {
   FaUserGraduate,
-  FaDatabase,
-  FaReact,
-  FaCode,
+ 
   FaClipboardList,
   FaUserCheck,
   FaChartLine,
