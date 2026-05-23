@@ -50,6 +50,12 @@ const Navbar = () => {
           About
         </NavLink>
       </div>
+
+      <div>
+        <button className="bg-lime-400 text-black px-4 py-2 rounded-lg font-semibold hover:bg-lime-500 transition-colors duration-300">
+          Sign Up
+        </button>
+      </div>
     </nav>
   );
 };

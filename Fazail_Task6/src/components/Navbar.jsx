@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+
 
 // Navbar Component
 function Navbar() {
   return (
     // Main Navbar Container
-    <nav className="bg-gradient-to-r from-slate-900 via-gray-900 to-black shadow-2xl text-white px-8 py-4 border-b border-gray-700">
+    <nav className="bg-linear-to-r from-slate-900 via-gray-900 to-black shadow-2xl text-white px-8 py-4 border-b border-gray-700">
 
       {/* Flex Container */}
       <div className="flex justify-between items-center">
@@ -45,7 +45,11 @@ function Navbar() {
           </Link>
         </div>
 
-     
+       <div>
+        <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Login
+        </button>
+       </div>
 
       </div>
     </nav>

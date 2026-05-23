@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Navbar = () => {
   return (
@@ -13,10 +13,6 @@ const Navbar = () => {
             <h1 className="text-2xl font-bold tracking-wide">
               School Dashboard
             </h1>
-
-            <p className="text-sm text-slate-300">
-              Student Management System
-            </p>
           </div>
         </div>
 
@@ -42,6 +38,10 @@ const Navbar = () => {
             Contact
           </li>
         </ul>
+
+        <div>
+          <button className=" px-3 py-2 rounded-md hover:bg-cyan-500 transition duration-300">Login</button>
+        </div>
       </div>
     </nav>
   );
