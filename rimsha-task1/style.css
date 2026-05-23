@@ -166,44 +166,118 @@ body {
   transform: scale(1.03); /* slight zoom effect */
 }
 
-/* ===== FOOTER ===== */
+
+
+
+/* ================= FOOTER SECTION ================= */
+
+/* Main Footer */
 .footer {
-  background: #222; /* dark background */
-  color: white; /* white text */
-  padding: 40px 20px; /* spacing */
+  background: rgb(170, 164, 164); /* white background */
+  margin: 40px 30px; /* outer spacing */
+  padding: 50px 40px; /* inner spacing */
+  border-radius: 25px; /* rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+ 
+
 }
 
+
+/* Footer Main Container */
 .footer-container {
   display: flex; /* columns in row */
-  justify-content: space-around; /* equal spacing */
-  flex-wrap: wrap; /* responsive wrap */
+  justify-content: space-between; /* equal spacing */
+  flex-wrap: wrap; /* responsive */
+  gap: 40px; /* space between columns */
 }
 
-/* Footer column heading */
+/* Footer Column */
+.footer-col {
+  flex: 1; /* equal width */
+  min-width: 220px; /* responsive width */
+}
+
+/* Website Logo */
+.footer-logo {
+  font-size: 32px; /* large text */
+  color: #1d4ed8; /* blue color */
+  margin-bottom: 15px;
+}
+
+/* Footer Description */
+.footer-text {
+  color: #555; /* gray text */
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+
+/* Social Media Links */
+.social-icons a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #1d4ed8; /* blue icons */
+}
+
+/* Footer Headings */
 .footer-col h4 {
-  margin-bottom: 10px; /* space below heading */
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #222;
 }
 
-/* Remove bullet points */
+/* Remove Bullets */
 .footer-col ul {
-  list-style: none; /* no bullets */
+  list-style: none;
+  padding: 0;
 }
 
-/* List items spacing */
+/* List Item Spacing */
 .footer-col ul li {
-  margin-bottom: 5px; /* space between links */
+  margin-bottom: 12px;
+  color: #555;
 }
 
-/* Footer links */
+/* Footer Links */
 .footer-col ul li a {
-  color: #ccc; /* light gray color */
-  text-decoration: none; /* remove underline */
+  color: #555;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-/* Bottom footer section */
+/* Hover Effect */
+.footer-col ul li a:hover {
+  color: #1d4ed8;
+}
+
+/* ================= Bottom Footer ================= */
+
 .footer-bottom {
-  text-align: center; /* center text */
-  margin-top: 20px; /* space above */
-  border-top: 1px solid #444; /* top line */
-  padding-top: 10px; /* space below line */
+  border-top: 1px solid #ddd; /* top border */
+  margin-top: 40px;
+  padding-top: 20px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  color: #666;
+}
+
+/* Bottom Footer Links */
+.bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Bottom Links Style */
+.bottom-links a {
+  text-decoration: none;
+  color: #666;
+}
+
+/* Hover Effect */
+.bottom-links a:hover {
+  color: #1d4ed8;
 }
