@@ -160,25 +160,17 @@ function display_products() {
             <!-- Current quantity in cart -->
             <p>In Cart: ${qty}</p>
 
-            <!-- Increase quantity -->
-            <button class="add-btn" data-id="${p.id}">+</button>
-
-            <!-- Decrease quantity -->
-            <button class="minus-btn" data-id="${p.id}">-</button>
+            <!-- Add To Cart Button -->
+            <button class="add-btn" data-id="${p.id}">
+                Add To Cart
+            </button>
         `;
 
-        // Add button click event
+        // Add To Cart button click event
         card.querySelector(".add-btn").addEventListener("click", (e) => {
 
             // Get product id from button
-            addtocart(e.target.dataset.id);
-        });
-
-        // Minus button click event
-        card.querySelector(".minus-btn").addEventListener("click", (e) => {
-
-            // Get product id from button
-            decreaseQuantity(e.target.dataset.id);
+            addtocart(Number(e.target.dataset.id));
         });
 
         // Append card into products container
@@ -209,9 +201,22 @@ function displayCartProducts() {
             <h3>${p.name}</h3>
             <p>${p.Price}</p>
 
-            <!-- Product quantity in cart -->
-            <p>Quantity: ${p.quantity}</p>
+            <div class="qty-box">
+                <button class="minus-btn" data-id="${p.id}">-</button>
+                <span>${p.quantity}</span>
+                <button class="add-btn" data-id="${p.id}">+</button>
+            </div>
         `;
+
+        // Increase quantity
+        cartCard.querySelector(".add-btn").addEventListener("click", (e) => {
+            addtocart(Number(e.target.dataset.id));
+        });
+
+        // Decrease quantity
+        cartCard.querySelector(".minus-btn").addEventListener("click", (e) => {
+            decreaseQuantity(Number(e.target.dataset.id));
+        });
 
         // Add cart card to cart container
         cart_container.appendChild(cartCard);
