@@ -1,23 +1,99 @@
-.navbar-container {
-    height: 30vh; 
-    background: #edbd3a; /* sets navbar background color */
-    display: flex; /* enables flexbox layout */
-    flex-direction: column; /* stacks items vertically */
-    justify-content: center; /* centers content vertically */
-    align-items: center; /* centers content horizontally */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;500;600;700&display=swap');
+
+.navbar {
+  background: linear-gradient(135deg, #7c3aed, #9333ea, #a855f7, #6366f1);
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Nunito', sans-serif;
 }
 
-.navbar-container h1 {
-    color: #ffffff; /* makes heading text white */
+/* ── Logo ── */
+.navbar-logo {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.logo-text span {
+  color: #fcd34d;
+}
+
+/* ── Nav Links ── */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
 }
 
 .navbar-links a {
-    margin: 0 10px; /* space between links */
-    color: white; /* link text color */
-    text-decoration: none; /* removes underline */
-    font-size: 14px; /* controls text size */
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 50px;
+  white-space: nowrap;
+  transition: color 0.15s;
 }
 
 .navbar-links a:hover {
-    text-decoration: underline; /* shows underline on hover */
+  color: #ffffff;
+}
+
+.navbar-links a.active {
+  color: #ffffff;
+}
+
+/* ── Actions ── */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-icon-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 15px;
+  transition: background 0.15s;
+}
+
+.nav-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.nav-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fcd34d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c3aed;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
 }
