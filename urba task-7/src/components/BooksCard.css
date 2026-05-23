@@ -43,7 +43,7 @@
 /* button */
 .fav-btn {
     border: none;
-    background: #2563eb;
+    background: #7c3aed;
     color: white;
 
     padding: 12px;
@@ -56,7 +56,7 @@
 }
 
 .fav-btn:hover {
-    background: #1d4ed8;
+    background: #7c3aed;
 }
 
 /* responsive */

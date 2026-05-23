@@ -1,26 +1,40 @@
-import React from "react"; 
+import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-// Navbar component
+// Navbar component for Student Portal
 let Navbar = function Header() {
     return (
-        <>
-        <div className="navbar-container">
+        <nav className="navbar">
 
-            {/* App title */}
-            <h1>Student portal App</h1>
+            {/* Logo - app name as text */}
+            <Link to="/" className="navbar-logo">
+                <span className="logo-text">STUDENT<span>PORTAL</span></span>
+            </Link>
 
             {/* Navigation links */}
-            <div className="navbar-links">
-                <Link to="/">Home</Link>
-                <Link to="/Students">Student</Link>
-                <Link to="/About">About</Link>
+            <ul className="navbar-links">
+                <li><Link to="/" className="active">Home</Link></li>
+                <li><Link to="/Students">Student</Link></li>
+                <li><Link to="/About">About</Link></li>
+            </ul>
+
+            {/* Action icons */}
+            <div className="navbar-actions">
+                {/* Search button */}
+                <button className="nav-icon-btn" aria-label="Search">
+                    <i className="fa-solid fa-magnifying-glass"></i>
+                </button>
+                {/* Notification button */}
+                <button className="nav-icon-btn" aria-label="Notifications">
+                    <i className="fa-regular fa-bell"></i>
+                </button>
+                {/* User avatar */}
+                <div className="nav-avatar">S</div>
             </div>
 
-        </div>
-        </>
-    )
+        </nav>
+    );
 };
 
 export default Navbar;

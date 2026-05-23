@@ -30,7 +30,7 @@
 .hero button {
     padding: 12px 20px;
     border: none;
-    background: #2563eb;
+    background: #7c3aed;
     color: white;
     border-radius: 8px;
     cursor: pointer;
@@ -39,7 +39,7 @@
 
 /* button hover effect */
 .hero button:hover {
-    background: #1e40af;
+    background: #7c3aed;
     transform: scale(1.05);
 }
 

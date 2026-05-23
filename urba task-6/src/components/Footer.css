@@ -1,29 +1,145 @@
-.footer{
-    margin-top: auto; /* pushes footer to bottom of page */
-    padding: 20px; /* inner spacing */
-    background-color: #afa5ee;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;500;600;700&display=swap');
+
+/* Main footer container */
+.footer {
+    background: #afa5ee;
+    padding: 48px 40px 0 40px;
+    font-family: 'Nunito', sans-serif;
 }
 
-.footer-content{
-    text-align: center; /* centers all footer text */
+/* Three column grid layout */
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    gap: 48px;
+    padding-bottom: 40px; 
+    padding-left: 40px;
 }
 
-.links{
-    margin: 10px 0; /* spacing above and below links */
+/* Logo link */
+.footer-logo {
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 14px;
 }
 
-.links a{
-    margin: 0 10px; /* space between links */
-    text-decoration: none; /* removes underline */
-    font-size: 14px; /* small readable text */
+/* Logo text styling */
+.footer-logo-text {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    line-height: 1;
 }
 
-.links a:hover{
-    text-decoration: underline; /* underline on hover effect */
+/* Accent color on second word */
+.footer-logo-text span {
+    color: #7c3aed;
 }
 
-.copy{
-    font-size: 12px; /* smaller copyright text */
-    margin-top: 10px; /* spacing above */
-    opacity: 0.8; /* slightly faded look */
+/* Brand description */
+.footer-brand p {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.7;
+    max-width: 240px;
+    margin-bottom: 22px;
+}
+
+/* Social icons row */
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 17px;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.footer-socials a:hover {
+    color: #ffffff;
+}
+
+/* Column heading */
+.footer-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+/* Column link list */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    transition: color 0.15s;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+}
+
+/* Contact row item */
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 11px;
+}
+
+/* Contact icon color */
+.footer-contact-item i {
+    color: #7c3aed;
+    font-size: 14px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* Bottom copyright bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.footer-bottom p {
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Bottom links row */
+.footer-bottom-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-bottom-links a {
+    text-decoration: none;
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.15s;
+}
+
+.footer-bottom-links a:hover {
+    color: #ffffff;
 }

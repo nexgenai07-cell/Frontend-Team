@@ -53,17 +53,12 @@
 
 /* submit button */
 .contact-form button {
-    background: #2563eb;
+    background: #7c3aed;
     color: white;
     border: none;
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
-}
-
-/* button hover effect */
-.contact-form button:hover {
-    background: #1e40af;
 }
 
 /* contact info card */
