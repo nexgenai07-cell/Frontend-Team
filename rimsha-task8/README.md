@@ -144,32 +144,8 @@ This project uses fake/mock data to simulate APIs:
 
 ---
 
-## 📂 Project Structure
-src/
-├── components/
-│   ├── layout/
-│   │   ├── Sidebar.jsx
-│   │   ├── TopBar.jsx
-│   │
-│   ├── ui/
-│   │   ├── Badge.jsx
-│   │   ├── Toggle.jsx
-│   │   ├── StatusBadge.jsx
-│
-├── pages/
-│   ├── ProfileSettings.jsx
-│   ├── SecuritySettings.jsx
-│   ├── ActivityLogs.jsx
-│   ├── DeviceManagement.jsx
-│   ├── Logout.jsx
-│
-├── data/
-│   ├── mockData.js
-│
-├── App.jsx
-├── index.css
 
----
+
 
 ## 🚀 How to Run
 
