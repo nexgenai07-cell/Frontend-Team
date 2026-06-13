@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:            #0a0a1a;
+  --surface:       rgba(255, 255, 255, 0.05);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --border:        rgba(255, 255, 255, 0.10);
+  --border-focus:  rgba(124, 58, 237, 0.70);
+  --accent:        #7c3aed;
+  --accent-light:  #a78bfa;
+  --accent-glow:   rgba(124, 58, 237, 0.25);
+  --text-primary:  #f1f5f9;
+  --text-muted:    #94a3b8;
+  --text-subtle:   #64748b;
+  --success:       #10b981;
+  --warning:       #f59e0b;
+  --error:         #ef4444;
+  --radius-sm:     8px;
+  --radius-md:     12px;
+  --radius-lg:     20px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Animated background aura */
+body::before {
+  content: '';
+  position: fixed;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse at center,
+    rgba(124, 58, 237, 0.18) 0%,
+    rgba(99, 102, 241, 0.10) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+  animation: aura-shift 8s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(ellipse at center,
+    rgba(79, 70, 229, 0.12) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes aura-shift {
+  0%   { transform: translateX(-50%) scale(1);    opacity: 1; }
+  100% { transform: translateX(-50%) scale(1.15); opacity: 0.7; }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
